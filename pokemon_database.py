@@ -21,15 +21,15 @@ class Pokemon(object):
 
 
 
-bulbasur = Pokemon("Bulbasur", "001", "A seed is growing on its back.", Grass, Poison)
-ivysaur = Pokemon("Ivysaur", "002", "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs. ", Grass, Poison)
-venusaur = Pokemon("Venusaur", "003", "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight. ", Grass Poison, Poison)
-charmander = Pokemon("Charmander", "004", " 	Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail. ", Fire,)
-charmeleon = Pokemon("Charmeleon", "005", " 	When it swings its burning tail, it elevates the temperature to unbearably high levels. ", Fire, )
-charizard = Pokemon("Charizard", "006", "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally. ", Fire, Flying)
-squirtle = Pokemon("Squirtle", "007", "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth. ", Water,)
-wartortle = Pokemon("Wartortle", "008", "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance. ", Water,)
-blastoise = Pokemon("Blastoise", "009", "A brutal Pok�mon with pressurized water jets on its shell. They are used for high speed tackles. ", Water,)
+bulbasur = Pokemon("Bulbasur", "001", "A seed is growing on its back.", "grass", "poison")
+ivysaur = Pokemon("Ivysaur", "002", "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs. ", "grass", "poison")
+venusaur = Pokemon("Venusaur", "003", "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight. ", "grass", "poison")
+charmander = Pokemon("Charmander", "004", " 	Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail. ", "fire", None)
+charmeleon = Pokemon("Charmeleon", "005", " 	When it swings its burning tail, it elevates the temperature to unbearably high levels. ", "fire", None )
+charizard = Pokemon("Charizard", "006", "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally. ", "fire", "flying")
+squirtle = Pokemon("Squirtle", "007", "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth. ", "fater", None)
+wartortle = Pokemon("Wartortle", "008", "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance. ", "water", None)
+blastoise = Pokemon("Blastoise", "009", "A brutal Pok�mon with pressurized water jets on its shell. They are used for high speed tackles. ", "water", None)
 
 
 pokedb = [
