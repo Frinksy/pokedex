@@ -23,7 +23,7 @@ def search():
 def type_search():
     results = []
     print()
-    print("-" * 10)
+    print("-" * 100)
     print("Search: type mode")
     arg1 = -1
     tmode = -1
@@ -76,7 +76,7 @@ def type_search():
                                                                                  pokemon.ptype == arg2):
                 results.append(pokemon.name)
                 print("Debug " + pokemon.name)
-    print("-"*10)
+    print("-"*100)
     print()
     print("Search results: ")
     for pokemon in results:
@@ -88,7 +88,7 @@ def type_search():
 def name_search():
     results = []
     print()
-    print("-"*10)
+    print("-"*100)
     arg = -1
     while arg == -1:
         arg = input("Please input at least 2 characters: ")
@@ -103,7 +103,7 @@ def name_search():
             results.append(pokemon)
 
     print()
-    print("-"*10)
+    print("-"*100)
     print("Search results: ")
     for pokemon in results:
         print(pokemon.name)
@@ -116,15 +116,19 @@ def name_search():
 def id_search():
     results = []
     print()
-    print("-"*10)
-
-    arg = input("Please input the id of the desired pokémon: ")
-
+    print("-"*100)
+    arg = -1
+    while arg == -1:
+        arg = input("Please input the id of the desired pokémon: (000 format) ")
+        if len(arg) != 3 or not arg.isnumeric():
+            arg = -1
+            print("Invalid")
     for pokemon in pokemon_database.pokedb:
         if pokemon.pokeid == arg:
             results.append(pokemon)
     print()
     print("-"*100)
+
     for pokemon in results:
         print(pokemon.name)
     if len(results) == 0:
