@@ -24,6 +24,6 @@ while True:
     print()
     print()
 
-    pokef.write("""{0} = Pokemon("{1}", "{2}", "{3}", {4}, {5})\n""".format(name.lower(), name, pokeid, desc, ptype, sec_ptype))
-    print("""{0} = Pokemon("{1}", "{2}", "{3}", {4}, {5})""".format(name.lower(), name, pokeid, desc, ptype, sec_ptype))
+    pokef.write("""{0} = Pokemon("{1}", "{2}", "{3}", "{4}", "{5}")\n""".format(name.lower(), name, pokeid, desc, ptype.lower(), sec_ptype.lower()))
+    print("""{0} = Pokemon("{1}", "{2}", "{3}", {4}, "{5}")""".format(name.lower(), name, pokeid, desc, ptype.lower(), sec_ptype.lower()))
 print("END")
