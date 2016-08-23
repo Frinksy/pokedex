@@ -28,6 +28,7 @@ def type_search():
         tmode = str(input("How many types do you wish to search? (1 or 2)"))
         if tmode not in ["1", "2"]:
             tmode = -1
+            print("Invalid!")
 
     while arg1 == -1:
         arg1 = input("Pokémon's type: ")
@@ -36,6 +37,7 @@ def type_search():
                         "flying", "psychic", "bug", "rock", "ghost",
                         "dragon", "dark", "steel", "fairy"]:
             arg1 = -1
+            print("Invalid!")
     if tmode == "2":
         arg2 = -1
         while arg2 == -1:
@@ -45,20 +47,25 @@ def type_search():
                             "flying", "psychic", "bug", "rock", "ghost",
                             "dragon", "dark", "steel", "fairy"]:
                 arg2 = -1
-            elif arg2 == arg1:
-                tmode = "1"
+                print("Invalid!")
+
+            try:
+                arg2 = arg2.lower()
+            except:
+                pass
+
+        if arg2 == arg1:
+            tmode = "1"
+
     try:
         arg1 = arg1.lower()
     except:
         pass
-    try:
-        arg2 = arg2.lower()
-    except:
-        pass
+
     if tmode == "1":
         for pokemon in pokemon_database.pokedb:
             if pokemon.ptype == arg1 or pokemon.sec_ptype == arg1:
-                results.append(pokemon)
+                results.append(pokemon.name)
 
     if tmode == "2":
         for pokemon in pokemon_database.pokedb:
@@ -66,10 +73,13 @@ def type_search():
                                                                                  pokemon.ptype == arg2):
                 results.append(pokemon.name)
                 print("Debug " + pokemon.name)
+    print("-"*10)
     print()
     print("Search results: ")
     for pokemon in results:
         print(pokemon)
+    if len(results) == 0:
+        print("No pokémon matches your search arguments.")
 
 
 search()
